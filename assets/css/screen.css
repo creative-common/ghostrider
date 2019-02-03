@@ -1,0 +1,45 @@
+#body {
+    padding-top: 76px;
+  }
+
+nav {
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}  
+
+.card {
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.card-body > h2 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.card-body > .card-text {
+  font-size: 14px;
+}
+
+.card-footer {
+  font-size: 12px;
+}
+
+.anchor{
+    text-decoration: none !important;
+}
+
+.card:hover {
+  box-shadow: 0 40px 40px rgba(0, 0, 0, 0.19), 0 10px 10px rgba(0, 0, 0, 0.23);
+}
+
+
+/********
+Author: Page
+*******/
+
+.social > a{
+  color:#F5F5F5 !important;
+}
+
+.social > i {
+  color:#F5F5F5 !important;
+}

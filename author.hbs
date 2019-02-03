@@ -1,0 +1,45 @@
+ {{!< default}}
+ 
+
+<!-- Page Content -->
+
+
+<div class="container-fluid">
+	{{#author}}
+    <div class="row">
+        <div class="col-sm-3 p-3 position-relative bg-dark ">
+            <div class="row sticky-top pt-3 text-center text-white ">
+                <div class="col-sm-12">
+                        <img style="width:150px;" src="{{profile_image}}" class="pt-3 rounded-circle mx-auto d-block" alt="Author">
+                </div>
+                <div class="pt-2 col-sm-12 social">
+                    <h4><strong>{{name}}</strong></h4>
+                    <p>{{bio}}</p>   
+                    <a href="https://facebook.com/{{facebook}}"><i class="fa fa-facebook-official"></i></a> | <a href="https://twitter.com/{{twitter}}"><i class="fa fa-twitter"></i></a> |  <a href="{{website}}"><i class="fa fa-globe"></i></a> 
+
+                </div>
+              
+            </div>
+           
+        </div>
+	{{/author}}
+
+        <div class="col" id="body">
+            <!-- Page Content -->
+            <div class="container">
+
+                    <div class="row">
+                                {{#foreach posts}}
+                                  {{!-- The tag below includes the markup for each post - partials/blog-post.hbs --}}
+                                  {{> "blog-post"}}
+                               {{/foreach}}
+                    </div>
+                
+                        {{pagination}}
+                
+                  </div>
+                  <!-- /.container -->
+       
+        </div>
+    </div>
+</div>

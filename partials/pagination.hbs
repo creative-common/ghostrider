@@ -1,0 +1,22 @@
+ <div class="row justify-content-center">
+             <div class="col-md-4">
+                  <!-- Pagination -->
+              <ul class="pagination justify-content-center mb-4">
+                {{#if prev}}
+                  <li class="page-item">
+                    <a class="page-link" href="{{page_url prev}}">&larr; Newer</a>
+                  </li>
+
+	       <span  class="page-number m-2">Page {{page}} of {{pages}}</span>
+
+                {{/if}}
+
+                {{#if next}}
+                  <li class="page-item">
+                    <a class="page-link" href="{{page_url next}}">Older &rarr;</a>
+                  </li>
+                {{/if}}
+              </ul>
+             </div>
+          </div>
+

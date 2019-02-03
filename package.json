@@ -1,0 +1,13 @@
+{
+    "name": "ghostrider",
+    "description": "Minimal blog theme built in bootstrap for the ghost platform",
+    "version": "0.6.0",
+    "license": "MIT",
+    "author": {
+        "email": "i@sanjeet.me"
+    },
+    "config": {
+        "posts_per_page": 6
+    },
+    "image_sizes": {}
+}

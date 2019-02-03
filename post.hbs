@@ -1,0 +1,59 @@
+ {{!< default}}
+ 
+ <!-- Navigation -->
+ {{> "header"}} 
+
+{{#post}}
+<!-- Page Content -->
+  <div class="container">
+
+<div class="row">
+
+      <!-- Post Content Column -->
+      <div class="col-lg-12">
+
+        <!-- Title -->
+        <h1 class="mt-4">{{title}}</h1>
+
+        <!-- Author -->
+        <p class="lead">
+          by
+          <a href="#">{{authors}}</a>
+        </p>
+
+        <hr>
+
+        <!-- Date/Time -->
+        <p>Posted on {{date published_at format="MMMM DD, YYYY"}}</p>
+
+        <hr>
+
+        <!-- Preview Image -->
+	 {{#if feature_image}}
+                <img
+		  class="img-fluid rounded"
+                    srcset="{{img_url feature_image size="s"}} 300w,
+                            {{img_url feature_image size="m"}} 600w,
+                            {{img_url feature_image size="l"}} 1000w,
+                            {{img_url feature_image size="xl"}} 2000w"
+                    sizes="(max-width: 800px) 400px,
+                            (max-width: 1170px) 700px,
+                            1400px"
+                    src="{{img_url feature_image size="xl"}}"
+                    alt="{{title}}"
+                />
+            {{/if}}
+
+        <hr>
+
+	{{content}}
+
+      </div>
+
+    </div>
+    <!-- /.row -->
+
+
+  </div>
+  <!-- /.container -->
+{{/post}}

@@ -1,0 +1,33 @@
+ {{!< default}}
+ 
+ <!-- Navigation -->
+ {{> "header"}} 
+
+	{{#tag}}
+	<div class="jumbotron text-center">
+		<h1>{{name}}</h1>
+		<h3>
+		{{#if description}}
+                    {{description}}
+                {{else}}
+                    A collection of {{plural ../pagination.total empty='posts' singular='% post' plural='% posts'}}
+                {{/if}}
+		</h3>
+	</div>
+	{{/tag}}
+
+<!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+                {{#foreach posts}}
+                  {{!-- The tag below includes the markup for each post - partials/blog-post.hbs --}}
+                  {{> "blog-post"}}
+               {{/foreach}}
+    </div>
+
+        {{pagination}}
+
+  </div>
+  <!-- /.container -->
+
